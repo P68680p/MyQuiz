@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Моя викторина</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="quiz_questions">Вопросы викторины</string>
+    <string name="trueBut">Правда</string>
+    <string name="falseBut">Ложь</string>
+
+    <string name="Question1">Амазонка - самая длинная река в мире</string>
+    <string name="Question2">Оттава - столица Канады</string>
+    <string name="Question3">Полярные медведи могут жить в Арктике, но не в Антарктике</string>
+    <string name="Question4">Венесуэла - дом для высочайшего водопада в мире</string>
+    <string name="Question5">В Шотландии единорог считается их национальным животным</string>
+    <string name="Question6">Четыре страны делят свои границы со Швейцарией</string>
+    <string name="Question7">Комары имеют рекорд по убийству большего количества людей, чем любой другой вид</string>
+    <string name="Question8">Первыми живыми животными, отправленными в космос, были плодовые мушки</string>
+    <string name="Question9">Атлантический океан — самый большой океан в мире</string>
+    <string name="Question10">Непал — единственная страна в мире без прямоугольного флага</string>
+    <string name="CorrectAnswer">Вы ответили правильно</string>
+    <string name="IncorrectAnswer">Вы ответили неправильно</string>
+
+
+    <string name="get_the_average">Средний балл</string>
+    <string name="reset_the_saved_result">Сбросить результат</string>
+    <string name="ignore">Игнорировать</string>
+    <string name="save">Сохранить</string>
+    <string name="ok">OK</string>
+
+</resources>
+

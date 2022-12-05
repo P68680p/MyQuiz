@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MyQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="quiz_questions">Quiz Questions</string>
+    <string name="trueBut">True</string>
+    <string name="falseBut">False</string>
+
+    <string name="Question1">The longest river in the world is the Amazon River</string>
+    <string name="Question2">Ottawa is the capital city of Canada</string>
+    <string name="Question3">Polar bears can only live in the Arctic region, not in the Antarctic</string>
+    <string name="Question4">Venezuela is home to the world’s highest waterfall</string>
+    <string name="Question5">In Scotland, the unicorn is their national animal</string>
+    <string name="Question6">Four countries share their land borders with Switzerland</string>
+    <string name="Question7">The mosquito has a record for killing more people than any other species in written history</string>
+    <string name="Question8">The first living animal sent into space were fruit flies</string>
+    <string name="Question9">The Atlantic Ocean is the world’s biggest ocean</string>
+    <string name="Question10">Nepal is the only country in the world without a rectangular flag</string>
+    <string name="CorrectAnswer">Your answer is correct</string>
+    <string name="IncorrectAnswer">Your answer is wrong</string>
+
+
+    <string name="get_the_average">Get Average</string>
+    <string name="reset_the_saved_result">Reset Result</string>
+    <string name="ignore">Ignore</string>
+    <string name="save">Save</string>
+    <string name="ok">OK</string>
+
+</resources>
+
