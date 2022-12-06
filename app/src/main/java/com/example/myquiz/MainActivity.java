@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int totalScore = 1;
     String getAverageDialogString;
 
-    public void updateFragment(int questionId, int colorId) {
+    public void createFragment(int questionId, int colorId) {
         FragmentManager manager = getSupportFragmentManager();
         manager.findFragmentById(R.id.fragment_container);
         fragmentObj = QuizFragment.newInstance(questionId, colorId);
@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             index = savedInstanceState.getInt("QuestionIndex");
         }
-
+        //update fragment
         questionId = obj.questionList.get(index).question;
         colorId = obj.colorList.get(index);
-        updateFragment(questionId, colorId);
+        createFragment(questionId, colorId);
 
         trueButton = findViewById(R.id.true_button);
         falseButton = findViewById(R.id.false_button);
@@ -79,8 +79,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.average:
                 String message = storageObject.getData(MainActivity.this);
+                System.out.println("----> message" + message);
                 int attemptCount = storageObject.countAttempts();
+                System.out.println("--->attemptCount"+attemptCount);
                 int totalAverage = storageObject.countAverageScore();
+                System.out.println("--->totalAverage"+totalAverage);
                 String dialogMessage = "Your correct answers are " + totalAverage + " in " + attemptCount + " attempts !!";
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle(dialogMessage);
@@ -99,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
     // True/False button click
     public void ButtonClicked(View view) {
         if (index < obj.questionList.size() - 1) {
+
             if (trueButton.isPressed()) {
                 tag = true;
             } else {
@@ -115,21 +119,21 @@ public class MainActivity extends AppCompatActivity {
             index++;
             questionId = obj.questionList.get(index).question;
             colorId = obj.colorList.get(index);
-            updateFragment(questionId, colorId);
+            createFragment(questionId, colorId);
             simpleProgressBar.setProgress(simpleProgressBar.getProgress() + 10);
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Your Scores are" + "\t" + totalScore + "\t" + "out of 10 !!");
             getAverageDialogString = totalScore + "/" + 10 + "#";
             builder.setPositiveButton(R.string.save, (dialogInterface, i) -> storageObject.saveData(MainActivity.this, getAverageDialogString));
-            totalScore = 0;
+            totalScore = 1;
             builder.setNegativeButton(R.string.ignore, null);
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
             index = 0;
             Collections.shuffle(obj.questionList);
             Collections.shuffle(obj.colorList);
-            updateFragment(obj.questionList.get(index).question, obj.colorList.get(index));
+            createFragment(obj.questionList.get(index).question, obj.colorList.get(index));
             simpleProgressBar.setProgress(0);
         }
     }
